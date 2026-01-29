@@ -94,14 +94,19 @@ h6 {
   width: 4rem;
 }
 
-.img-container > img {
-  width: 100%;
-  height: 100px;
+body {
+  background-color: #e0dede;
 }
 
 .ad-container {
   margin-bottom: 50px;
   position: relative;
+}
+
+.ad-container img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
 }
 
 .ad-text {
@@ -117,11 +122,38 @@ h6 {
 }
 
 .grid-container {
+  max-width: 1100px;
+  margin: 1.5rem auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 1rem;
-  margin: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  padding: 0 1.25rem;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.grid-item-top {
+  position: relative;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 120px;
+}
+
+.grid-item-top p {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0 10px;
+  border-radius: 3px;
 }
 
 .footer-flex-container {
